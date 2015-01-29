@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fbd6d821-993b-4e59-965c-5a86556ee301</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>O365UniversalApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AuthenticationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Office365APIHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MyContact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceCapabilityInfo.cs" />
+  </ItemGroup>
+</Project>
